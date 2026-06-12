@@ -3,75 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - TaskFlow</title>
+    <title>Política de Privacidad - TaskFlow | SYSTEM-OTMX</title>
+    <!-- Importación de la fuente oficial Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --bg-color: #f4f6f9; /* Fondo de la página suave para no cansar la vista */
+            --container-bg: #ffffff; /* Contenedor blanco puro */
+            --primary-text: #1a1a1a; /* Texto principal oscuro casi negro */
+            --secondary-text: #5f6368; /* Texto secundario gris corporativo */
+            --accent-red: #d3121a; /* El color rojo distintivo de tu logo */
+            --border-color: #e0e4ec;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            line-height: 1.6;
-            color: #202124;
-            max-width: 750px;
-            margin: 0 auto;
-            padding: 24px;
-            background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+            line-height: 1.7;
+            padding: 40px 20px;
         }
+
         .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            padding: 50px;
+            border-radius: 4px; /* Bordes rectos y geométricos alineados a tu marca */
+            border-top: 5px solid var(--accent-red); /* Detalle superior con tu rojo de acento */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra muy sutil y limpia */
         }
-        h1 { color: #1a73e8; border-bottom: 1px solid #dadce0; padding-bottom: 12px; font-size: 28px; }
-        h2 { color: #202124; margin-top: 28px; font-size: 20px; }
-        p, li { color: #5f6368; font-size: 15px; }
-        ul { padding-left: 20px; }
-        .highlight { background-color: #e8f0fe; color: #1a73e8; padding: 12px; border-radius: 4px; font-weight: 500; }
-        .footer { margin-top: 48px; font-size: 13px; color: #70757a; text-align: center; border-top: 1px solid #dadce0; padding-top: 16px; }
+
+        /* Encabezado con Identidad de Marca */
+        .brand-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+        }
+
+        /* Tip para el Logo en tema claro */
+        .brand-logo {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .brand-header p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 10px;
+            letter-spacing: -0.5px;
+            color: var(--primary-text);
+        }
+
+        .meta-date {
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        /* Estilos de Contenido */
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--primary-text);
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--accent-red);
+            margin-right: 10px;
+        }
+
+        p {
+            font-weight: 400;
+            color: var(--secondary-text);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .highlight-box {
+            background-color: rgba(211, 18, 26, 0.04); /* Fondo rojo sumamente sutil */
+            border-left: 3px solid var(--accent-red);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 2px;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-text);
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        li {
+            font-weight: 400;
+            font-size: 0.95rem;
+            color: var(--secondary-text);
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent-red);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Footer de la página */
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--secondary-text);
+            letter-spacing: 1px;
+        }
+
+        /* Responsivo para móviles */
+        @media (max-width: 600px) {
+            body { padding: 15px 10px; }
+            .container { padding: 25px 20px; }
+            h1 { font-size: 1.7rem; }
+            h2 { font-size: 1.2rem; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Política de Privacidad</h1>
-    <p><strong>Última actualización:</strong> 11 de junio de 2026</p>
-
-    <p>Esta Política de Privacidad describe el tratamiento de los datos en nuestra aplicación móvil de gestión de tareas <strong>TaskFlow</strong> (en adelante, la "Aplicación").</p>
-
-    <div class="highlight">
-        📌 <strong>Resumen ejecutivo:</strong> Privacidad absoluta. Nuestra Aplicación funciona de manera 100% local. No recopilamos, almacenamos, transmitimos ni vendemos ningún tipo de información personal, técnica ni de uso.
+    <!-- Encabezado de Marca -->
+    <div class="brand-header">
+        <!-- Renderizará tu imagen de logo con fondo blanco -->
+        <img src="logo.png" alt="SYSTEM-OTMX Logo" class="brand-logo" onerror="this.style.display='none';">
+        <p>SYSTEM-OTMX</p>
+        <h1>Política de Privacidad</h1>
+        <div class="meta-date">Última actualización: 12 de junio de 2026</div>
     </div>
 
-    <h2>1. Recopilación y uso de información</h2>
-    <p>La Aplicación está diseñada para que el usuario pueda crear, marcar como terminadas y eliminar tareas de forma exclusiva y privada en su dispositivo móvil. </p>
+    <p>Esta Política de Privacidad describe de manera transparente el tratamiento de los datos en nuestra aplicación móvil de gestión de tareas <strong>TaskFlow</strong> (en adelante, la "Aplicación").</p>
+
+    <div class="highlight-box">
+        <strong>📌 Compromiso de Privacidad Absoluta:</strong> Nuestra Aplicación opera bajo un modelo de arquitectura 100% local. No recopilamos, almacenamos, transmitimos, procesamos ni comercializamos ningún tipo de información personal, técnica o de uso de nuestros usuarios.
+    </div>
+
+    <h2>1. Recopilación y Uso de Información</h2>
+    <p>La Aplicación está desarrollada con el fin exclusivo de permitir la creación, organización, seguimiento y eliminación de tareas de manera privada en tu dispositivo móvil.</p>
     <ul>
-        <li><strong>Sin registro:</strong> No requerimos la creación de una cuenta, inicio de sesión ni vinculación con correos electrónicos o redes sociales para su funcionamiento.</li>
-        <li><strong>Almacenamiento local:</strong> Todas las tareas que creas se guardan únicamente en la memoria interna de tu propio dispositivo. Ninguna información es enviada a servidores externos ni se comparte con terceros. Al borrar una tarea o desinstalar la Aplicación, los datos se eliminan definitivamente de tu teléfono.</li>
-        <li><strong>Sin permisos especiales:</strong> La Aplicación no solicita acceso a tu ubicación, cámara, contactos, micrófono ni a la galería de fotos.</li>
+        <li><strong>Sin Registro de Cuentas:</strong> No se requiere un proceso de inicio de sesión, credenciales, ni vinculación con correos electrónicos o perfiles de redes sociales para su funcionamiento.</li>
+        <li><strong>Almacenamiento Local de Datos:</strong> Todas las notas y estados de las tareas se guardan de forma nativa en la base de datos interna de tu dispositivo. Ningún servidor externo tiene acceso a este contenido. Al eliminar un elemento o desinstalar la Aplicación, la información se borra definitivamente.</li>
+        <li><strong>Ausencia de Permisos Críticos:</strong> TaskFlow no requiere ni solicitará acceso a tu ubicación, cámara, libreta de contactos, almacenamiento de archivos multimedia ni sensores integrados.</li>
     </ul>
 
-    <h2>2. Proveedores de servicios y publicidad de terceros</h2>
-    <p>A diferencia de otras aplicaciones, esta Aplicación:</p>
+    <h2>2. Proveedores de Servicios de Terceros</h2>
+    <p>Con el objetivo de garantizar la máxima privacidad e integridad de tu entorno, la Aplicación:</p>
     <ul>
-        <li><strong>No incluye publicidad</strong> (como AdMob), por lo que no se recopilan IDs de publicidad ni datos de comportamiento del usuario.</li>
-        <li><strong>No utiliza herramientas de analítica web o seguimiento</strong> (como Firebase Analytics o Google Analytics).</li>
+        <li><strong>No incluye SDKs publicitarios:</strong> No se integran plataformas como AdMob, por lo que no existen rastreadores ni recolección de IDs de publicidad institucional.</li>
+        <li><strong>No implementa herramientas de analítica web:</strong> No se utiliza Firebase Analytics ni software de mapeo de comportamiento que registre tu actividad en la Aplicación.</li>
     </ul>
 
-    <h2>3. Enlaces a otros sitios</h2>
-    <p>La Aplicación no contiene enlaces a sitios web externos ni servicios de terceros.</p>
+    <h2>3. Seguridad</h2>
+    <p>Al no gestionar bases de datos distribuidas en la nube ni flujos a través de redes públicas, la confidencialidad y protección de tus tareas se delega directamente en las capas de seguridad y cifrado nativos de tu propio sistema operativo Android.</p>
 
-    <h2>4. Seguridad de los datos</h2>
-    <p>Dado que no recopilamos ni almacenamos datos en internet, la seguridad de tus tareas depende por completo de la seguridad física y lógica de tu propio dispositivo Android.</p>
+    <h2>4. Modificaciones a esta Política</h2>
+    <p>Nos reservamos el derecho de actualizar este documento en función del desarrollo de nuevas características tecnológicas de carácter local. Cualquier actualización se publicará directamente en esta sección web indicando la fecha de vigencia.</p>
 
-    <h2>5. Cambios a esta Política de Privacidad</h2>
-    <p>Es posible que actualicemos esta política en el futuro si decidimos añadir nuevas funciones locales. Cualquier cambio se verá reflejado directamente en esta página con su respectiva fecha de actualización.</p>
-
-    <h2>6. Contacto</h2>
-    <p>Si tienes alguna pregunta sobre esta política de privacidad o sobre el funcionamiento local de la aplicación, puedes ponerte en contacto a través de:</p>
+    <h2>5. Contacto</h2>
+    <p>Si deseas resolver alguna inquietud técnica relacionada con los criterios de privacidad locales de TaskFlow, puedes contactarnos directamente mediante nuestro canal corporativo:</p>
     <ul>
-        <li><strong>Correo electrónico:</strong> contacto@system-otmx.com</li>
+        <li><strong>Correo electrónico de soporte:</strong> soporte@system-otmx.com</li>
     </ul>
 
+    <!-- Pie de página integrado con tu marca -->
     <div class="footer">
-        <p>&copy; 2026 SYSTEM-OTMX. Todos los derechos reservados.</p>
+        <p>&copy; 2026 SYSTEM-OTMX. TODOS LOS DERECHOS RESERVADOS.</p>
     </div>
 </div>
 
